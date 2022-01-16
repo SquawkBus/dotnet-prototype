@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\SquawkBus.Extensions.JwtAuthentication\SquawkBus.Extensions.JwtAuthentication.csproj" />
+    <ProjectReference Include="../../src/SquawkBus.Extensions.JwtAuthentication/SquawkBus.Extensions.JwtAuthentication.csproj" />
   </ItemGroup>
 
 </Project>

@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\SquawkBus.Adapters\SquawkBus.Adapters.csproj" />
+    <ProjectReference Include="../../../src/SquawkBus.Adapters/SquawkBus.Adapters.csproj" />
   </ItemGroup>
 
 </Project>

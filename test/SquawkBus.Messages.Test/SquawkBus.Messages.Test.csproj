@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\SquawkBus.Messages\SquawkBus.Messages.csproj" />
+    <ProjectReference Include="../../src/SquawkBus.Messages/SquawkBus.Messages.csproj" />
   </ItemGroup>
 
 </Project>

@@ -8,8 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\SquawkBus.Adapters\SquawkBus.Adapters.csproj" />
-    <ProjectReference Include="..\Common\Common.csproj" />
+    <ProjectReference Include="../../../src/SquawkBus.Adapters/SquawkBus.Adapters.csproj" />
+    <ProjectReference Include="../Common/Common.csproj" />
   </ItemGroup>
 
 </Project>
