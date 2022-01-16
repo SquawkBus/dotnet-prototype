@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>SquawkBus.Extensions.LdapAuthentication</PackageId>
+    <Version>1.0.0-alpha1</Version>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <Authors>Rob Blackbourn</Authors>
+    <Company>SquawkBus</Company>
+    <RepositoryUrl>https://github.com/squawkbus/squawkbus</RepositoryUrl>
+    <Description>LDAP Authentication for SquawkBus.</Description>
+    <PackageTags>MessageBus, Network, Publish, Subscribe, pubsub</PackageTags>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.DirectoryServices.Protocols" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\src\SquawkBus.Authentication\SquawkBus.Authentication.csproj" />
+    <ProjectReference Include="..\..\..\src\SquawkBus.Messages\SquawkBus.Messages.csproj" />
+  </ItemGroup>
+
+</Project>
