@@ -100,6 +100,38 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "articles", "articles", "{BC
 		documents\articles\toc.yml = documents\articles\toc.yml
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "server-config", "server-config", "{FA84EB87-D3F3-443F-BA37-E0C49EB76061}"
+	ProjectSection(SolutionItems) = preProject
+		demos\server-config\README.md = demos\server-config\README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "jwt", "jwt", "{710E56E0-0013-4FB5-A0FC-18E5700C4117}"
+	ProjectSection(SolutionItems) = preProject
+		demos\server-config\jwt\appsettings.json = demos\server-config\jwt\appsettings.json
+		demos\server-config\jwt\start_distributor.sh = demos\server-config\jwt\start_distributor.sh
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ldap", "ldap", "{EB8DFEE7-8DD1-4B00-8F2D-6AF228242EE9}"
+	ProjectSection(SolutionItems) = preProject
+		demos\server-config\ldap\appsettings.json = demos\server-config\ldap\appsettings.json
+		demos\server-config\ldap\README.md = demos\server-config\ldap\README.md
+		demos\server-config\ldap\start_distributor.sh = demos\server-config\ldap\start_distributor.sh
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "password-file", "password-file", "{F1FD40E3-FE66-4F46-9ACB-C52F1F180AC0}"
+	ProjectSection(SolutionItems) = preProject
+		demos\server-config\password-file\appsettings.json = demos\server-config\password-file\appsettings.json
+		demos\server-config\password-file\passwords.json = demos\server-config\password-file\passwords.json
+		demos\server-config\password-file\README.md = demos\server-config\password-file\README.md
+		demos\server-config\password-file\start_distributor.sh = demos\server-config\password-file\start_distributor.sh
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ssl", "ssl", "{836B34B7-8BAA-419C-BE75-B055890833AA}"
+	ProjectSection(SolutionItems) = preProject
+		demos\server-config\ssl\appsettings.json = demos\server-config\ssl\appsettings.json
+		demos\server-config\ssl\start_distributor.sh = demos\server-config\ssl\start_distributor.sh
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -220,6 +252,11 @@ Global
 		{FAED8CA1-9944-43F3-87EE-3F514EC38813} = {2F790AA1-EAE0-4817-BE09-D6B3AA29CD7E}
 		{4BA25AC1-5840-47ED-B2CB-215720501748} = {FAED8CA1-9944-43F3-87EE-3F514EC38813}
 		{BC52FBDD-48BB-4D9D-850E-362A2391A19C} = {FAED8CA1-9944-43F3-87EE-3F514EC38813}
+		{FA84EB87-D3F3-443F-BA37-E0C49EB76061} = {F42DF468-1FB7-47A7-B49A-F5F31C91EDDF}
+		{710E56E0-0013-4FB5-A0FC-18E5700C4117} = {FA84EB87-D3F3-443F-BA37-E0C49EB76061}
+		{EB8DFEE7-8DD1-4B00-8F2D-6AF228242EE9} = {FA84EB87-D3F3-443F-BA37-E0C49EB76061}
+		{F1FD40E3-FE66-4F46-9ACB-C52F1F180AC0} = {FA84EB87-D3F3-443F-BA37-E0C49EB76061}
+		{836B34B7-8BAA-419C-BE75-B055890833AA} = {FA84EB87-D3F3-443F-BA37-E0C49EB76061}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EF56BD3F-2500-4BAE-8E34-951AD867F885}

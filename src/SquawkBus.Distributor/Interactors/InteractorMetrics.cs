@@ -67,62 +67,62 @@ namespace SquawkBus.Distributor.Interactors
             public _Metrics()
             {
                 ReadsReceived = Metrics.CreateCounter(
-                    "messagebus_reads",
+                    "squawkbus_reads",
                     "The number of read messages read by an interactor",
                     Host, User, Id, Application);
 
                 WritesSent = Metrics.CreateCounter(
-                    "messagebus_writes",
+                    "squawkbus_writes",
                     "The number of write messages sent from an interactor",
                     Host, User, Id, Application);
 
                 WriteQueueLength = Metrics.CreateGauge(
-                    "messagebus_write_queue_length",
+                    "squawkbus_write_queue_length",
                     "The number of messages on an interactor write queue",
                     Host, User, Id, Application);
 
                 Faulted = Metrics.CreateCounter(
-                    "messagebus_interactor_faults",
+                    "squawkbus_interactor_faults",
                     "The number of interactor faults",
                     Host, User, Id, Application);
 
                 AuthorizationRequests = Metrics.CreateCounter(
-                    "messagebus_authorization_requests",
+                    "squawkbus_authorization_requests",
                     "The number of authorization requests",
                     Host, User, Id, Application);
 
                 AuthorizationResponses = Metrics.CreateCounter(
-                    "messagebus_authorization_responses",
+                    "squawkbus_authorization_responses",
                     "The number of authorization responses",
                     Host, User, Id, Application);
 
                 Interactors = Metrics.CreateGauge(
-                    "messagebus_interactors",
+                    "squarkbus_interactors",
                     "The number of interactors",
                     Host, User, Id, Application);
 
                 ForwardedSubscriptions = Metrics.CreateCounter(
-                    "messagebus_forwarded_subscriptions",
+                    "squawkbus_forwarded_subscriptions",
                     "The number of forwarded subscriptions",
                     Feed, Host, User, Id, Application);
 
                 FeedRequests = Metrics.CreateGauge(
-                    "messagebus_notification_requests",
+                    "squawkbus_notification_requests",
                     "The number of notification requests",
                     Feed, Host, User, Id, Application);
 
                 UnicastMessages = Metrics.CreateCounter(
-                    "messagebus_published_unicast_messages",
+                    "squawkbus_published_unicast_messages",
                     "The number of unicast messages sent",
                     Feed, Host, User, Id, Application);
 
                 MulticastMessages = Metrics.CreateCounter(
-                    "messagebus_published_multicast_messages",
+                    "squawkbus_published_multicast_messages",
                     "The number of multicast messages sent",
                     Feed, Host, User, Id, Application);
 
                 Subscriptions = Metrics.CreateGauge(
-                    "messagebus_subscriptions",
+                    "squawkbus_subscriptions",
                     "The number of subscriptions",
                     Feed, Host, User, Id, Application);
             }

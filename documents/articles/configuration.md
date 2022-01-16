@@ -152,7 +152,7 @@ The following configuration provides authentication through JSON Web Tokens.
         "address": "0.0.0.0",
         "port": 9001,
         "authentication": {
-            "assemblyPath": "%MESSAGEBUS_EXTENSIONS%/SquawkBus.Extensions.JwtAuthentication.dll",
+            "assemblyPath": "%SQUAWKBUS_EXTENSIONS%/SquawkBus.Extensions.JwtAuthentication.dll",
             "assemblyName": "SquawkBus.Extensions.JwtAuthentication",
             "typeName": "SquawkBus.Extensions.JwtAuthentication.JwtAuthenticator",
             "args": [
@@ -200,7 +200,7 @@ The following configuration file provides authentication for LDAP.
         "address": "0.0.0.0",
         "port": 9001,
         "authentication": {
-            "assemblyPath": "%MESSAGEBUS_EXTENSIONS%/SquawkBus.Extensions.LdapAuthentication.dll",
+            "assemblyPath": "%SQUAWKBUS_EXTENSIONS%/SquawkBus.Extensions.LdapAuthentication.dll",
             "assemblyName": "SquawkBus.Extensions.LdapAuthentication",
             "typeName": "SquawkBus.Extensions.LdapAuthentication.LdapAuthenticator",
             "args": [
@@ -245,7 +245,7 @@ The following provides authentication using a password file.
         "address": "0.0.0.0",
         "port": 9001,
         "authentication": {
-            "assemblyPath": "%MESSAGEBUS_EXTENSIONS%/SquawkBus.Extensions.PasswordFileAuthentication.dll",
+            "assemblyPath": "%SQUAWKBUS_EXTENSIONS%/SquawkBus.Extensions.PasswordFileAuthentication.dll",
             "assemblyName": "SquawkBus.Extensions.PasswordFileAuthentication",
             "typeName": "SquawkBus.Extensions.PasswordFileAuthentication.PasswordFileAuthenticator",
             "args": [
@@ -289,11 +289,11 @@ The following is an example of authorisation.
         "address": "0.0.0.0",
         "port": 9001,
         "authentication": {
-            "assemblyPath": "%MESSAGEBUS_EXTENSIONS%/SquawkBus.Extensions.PasswordFileAuthentication.dll",
+            "assemblyPath": "%SQUAWKBUS_EXTENSIONS%/SquawkBus.Extensions.PasswordFileAuthentication.dll",
             "assemblyName": "SquawkBus.Extensions.PasswordFileAuthentication",
             "typeName": "SquawkBus.Extensions.PasswordFileAuthentication.PasswordFileAuthenticator",
             "args": [
-                "%SQUAWKBUS_MESSAGEBUS_ROOT%/examples/server-config/password-file/passwords.json"
+                "%SQUAWKBUS_ROOT%/examples/server-config/password-file/passwords.json"
             ]
         },
         "heartbeatInterval": "00:00:00",

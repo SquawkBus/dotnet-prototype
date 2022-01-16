@@ -75,8 +75,8 @@ contents.
 ```bat
 REM Start the distributor
 
-set MESSAGEBUS_HOME=%~dp0
-set CONFIG_FILE=%MESSAGEBUS_HOME%\appsettings-pwd.json
+set SQUAWKBUS_HOME=%~dp0
+set CONFIG_FILE=%SQUAWKBUS_HOME%\appsettings-pwd.json
 
 SquawkBus.Distributor %CONFIG_FILE%
 ```
@@ -89,11 +89,11 @@ following.
   "distributor": {
     ...
     "authentication": {
-      "assemblyPath": "%MESSAGEBUS_HOME%/extensions/SquawkBus.Extensions.PasswordFileAuthentication/SquawkBus.Extensions.PasswordFileAuthentication.dll",
+      "assemblyPath": "%SQUAWKBUS_HOME%/extensions/SquawkBus.Extensions.PasswordFileAuthentication/SquawkBus.Extensions.PasswordFileAuthentication.dll",
       "assemblyName": "SquawkBus.Extensions.PasswordFileAuthentication",
       "typeName": "SquawkBus.Extensions.PasswordFileAuthentication.PasswordFileAuthenticator",
       "args": [
-        "%MESSAGEBUS_HOME%/utilities/MakePassword/passwords.json"
+        "%SQUAWKBUS_HOME%/utilities/MakePassword/passwords.json"
       ]
     },    ...
   }
@@ -105,7 +105,7 @@ For simplicity we we not set up the SSL configuration here, but as usernames
 and passwords will be exchange this should also be configured.
 
 The password file authenticator takes a single argument in the `args` property
-which is the path to the passwords file. The `MESSAGEBUS_HOME` environment
+which is the path to the passwords file. The `SQUAWKBUS_HOME` environment
 variable was set up in the launch script. The password file is created using
 the `MakePassword` utility and for simplicity we will keep the file in the
 same folder. Make a password in the following manner.
@@ -160,7 +160,7 @@ unpack it in the same manner as before. Copy the `appsettings.json` to
   "distributor": {
     ...
     "authentication": {
-      "assemblyPath": "%MESSAGEBUS_HOME%/extensions/SquawkBus.Extensions.LdapAuthentication/SquawkBus.Extensions.LdapAuthentication.dll",
+      "assemblyPath": "%SQUAWKBUS_HOME%/extensions/SquawkBus.Extensions.LdapAuthentication/SquawkBus.Extensions.LdapAuthentication.dll",
       "assemblyName": "SquawkBus.Extensions.LdapAuthentication",
       "typeName": "SquawkBus.Extensions.LdapAuthentication.LdapAuthenticator",
       "args": [
@@ -198,7 +198,7 @@ unpack it in the same manner as before. Copy the `appsettings.json` to
   "distributor": {
     ...
     "authentication": {
-      "assemblyPath": "%MESSAGEBUS_HOME%/extensions/SquawkBus.Extensions.JwtAuthentication/SquawkBus.Extensions.JwtAuthentication.dll",
+      "assemblyPath": "%SQUAWKBUS_HOME%/extensions/SquawkBus.Extensions.JwtAuthentication/SquawkBus.Extensions.JwtAuthentication.dll",
       "assemblyName": "SquawkBus.Extensions.JwtAuthentication",
       "typeName": "SquawkBus.Extensions.JwtAuthenticator",
       "args": [

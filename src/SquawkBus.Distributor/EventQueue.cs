@@ -11,9 +11,9 @@ namespace SquawkBus.Distributor
         private readonly ILogger<EventQueue<T>> _logger;
         private readonly CancellationToken _token;
         private readonly BlockingCollection<T> _interactorEventQueue = new BlockingCollection<T>();
-        private readonly Counter _eventsEnqueued = Metrics.CreateCounter("messagebus_events_enqueued", "The number of events enqueued");
-        private readonly Counter _eventsDequeued = Metrics.CreateCounter("messagebus_events_dequeued", "The number of events dequeued");
-        private readonly Gauge _eventsQueueLength = Metrics.CreateGauge("messagebus_events_queue_length", "The number of events on the queue");
+        private readonly Counter _eventsEnqueued = Metrics.CreateCounter("squawkbus_events_enqueued", "The number of events enqueued");
+        private readonly Counter _eventsDequeued = Metrics.CreateCounter("squawkbus_events_dequeued", "The number of events dequeued");
+        private readonly Gauge _eventsQueueLength = Metrics.CreateGauge("squawkbus_events_queue_length", "The number of events on the queue");
 
         public EventQueue(ILoggerFactory loggerFactory, CancellationToken token)
         {
