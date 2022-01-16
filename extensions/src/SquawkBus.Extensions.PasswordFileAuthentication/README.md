@@ -1,4 +1,4 @@
-# JetBlack.MessageBus.Extension.PasswordFileAuthentication
+# SquawkBus.Extensions.PasswordFileAuthentication
 
 ## Overview
 
@@ -17,9 +17,9 @@ Specify the following configuration in the `appsettings.json` file. Not the `%SO
         ...
 
         "authentication": {
-            "assemblyPath": "%AUTH_PLUGIN_FOLDER%/JetBlack.MessageBus.Extension.PasswordFileAuthentication.dll",
-            "assemblyName": "JetBlack.MessageBus.Extension.PasswordFileAuthentication",
-            "typeName": "JetBlack.MessageBus.Common.Security.Authentication.PasswordFileAuthenticator",
+            "assemblyPath": "%AUTH_PLUGIN_FOLDER%/SquawkBus.Extension.PasswordFileAuthentication.dll",
+            "assemblyName": "SquawkBus.Extension.PasswordFileAuthentication",
+            "typeName": "SquawkBus.Common.Security.Authentication.PasswordFileAuthenticator",
             "args": [
                 "%PASSWORD_FILE_FOLDER%/passwords.json"
             ]
