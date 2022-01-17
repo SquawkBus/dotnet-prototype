@@ -7,129 +7,138 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8C8D73A6-B2D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{EED055D3-12B1-4587-B34F-FD54CB8ABB16}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SquawkBus.Messages", "src/SquawkBus.Messages/SquawkBus.Messages.csproj", "{E12C7A42-8DA8-4744-8E91-38EB6622F2AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SquawkBus.Messages", "src\SquawkBus.Messages\SquawkBus.Messages.csproj", "{E12C7A42-8DA8-4744-8E91-38EB6622F2AA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SquawkBus.Messages.Test", "test/SquawkBus.Messages.Test/SquawkBus.Messages.Test.csproj", "{6DC3BD9C-0DAD-48E3-8FA5-7B5C12798119}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SquawkBus.Messages.Test", "test\SquawkBus.Messages.Test\SquawkBus.Messages.Test.csproj", "{6DC3BD9C-0DAD-48E3-8FA5-7B5C12798119}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SquawkBus.Distributor", "src/SquawkBus.Distributor/SquawkBus.Distributor.csproj", "{8607CA25-FD6D-41E2-B2B6-E19345B6E57F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SquawkBus.Distributor", "src\SquawkBus.Distributor\SquawkBus.Distributor.csproj", "{8607CA25-FD6D-41E2-B2B6-E19345B6E57F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SquawkBus.Authentication", "src/SquawkBus.Authentication/SquawkBus.Authentication.csproj", "{8214B91B-2511-4416-944F-3235DEE53F88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SquawkBus.Authentication", "src\SquawkBus.Authentication\SquawkBus.Authentication.csproj", "{8214B91B-2511-4416-944F-3235DEE53F88}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SquawkBus.Adapters", "src/SquawkBus.Adapters/SquawkBus.Adapters.csproj", "{D30740E7-4591-4E19-B40D-CA0FD95AEB36}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SquawkBus.Adapters", "src\SquawkBus.Adapters\SquawkBus.Adapters.csproj", "{D30740E7-4591-4E19-B40D-CA0FD95AEB36}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "demos", "demos", "{F42DF468-1FB7-47A7-B49A-F5F31C91EDDF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "simple", "simple", "{23E8C646-CB59-4BE1-A0B1-301F51F27E64}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Subscriber", "demos/simple/Subscriber/Subscriber.csproj", "{90D03DEE-85C6-4750-8D50-8B619C4DA273}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Subscriber", "demos\simple\Subscriber\Subscriber.csproj", "{90D03DEE-85C6-4750-8D50-8B619C4DA273}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Publisher", "demos/simple/Publisher/Publisher.csproj", "{13B7314C-A32B-44C0-9225-D1DBCDB05880}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Publisher", "demos\simple\Publisher\Publisher.csproj", "{13B7314C-A32B-44C0-9225-D1DBCDB05880}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notifier", "demos/simple/Notifier/Notifier.csproj", "{7742C765-6252-4AA0-9213-2B159614F915}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notifier", "demos\simple\Notifier\Notifier.csproj", "{7742C765-6252-4AA0-9213-2B159614F915}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "selectfeed", "selectfeed", "{C999CB87-F919-4FA9-B5CD-0ABD1D7C2DFB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SelectFeedPublisher", "demos/selectfeed/SelectFeedPublisher/SelectFeedPublisher.csproj", "{81BFB31A-57A0-4ED3-8A06-F214801C4819}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SelectFeedPublisher", "demos\selectfeed\SelectFeedPublisher\SelectFeedPublisher.csproj", "{81BFB31A-57A0-4ED3-8A06-F214801C4819}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "authorization", "authorization", "{5EA08E56-F0B6-4E92-A309-0E291E741E8D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authorizer", "demos/authorization/Authorizer/Authorizer.csproj", "{3E3421A4-4CE8-434E-A712-E40C7339634C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authorizer", "demos\authorization\Authorizer\Authorizer.csproj", "{3E3421A4-4CE8-434E-A712-E40C7339634C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "demos/authorization/Common/Common.csproj", "{76E5C96D-5F9C-4DE0-B033-A0404A9BAFBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "demos\authorization\Common\Common.csproj", "{76E5C96D-5F9C-4DE0-B033-A0404A9BAFBF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notifier", "demos/authorization/Notifier/Notifier.csproj", "{FDA190AF-0B7C-48C0-8AED-41F9657682F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notifier", "demos\authorization\Notifier\Notifier.csproj", "{FDA190AF-0B7C-48C0-8AED-41F9657682F2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Publisher", "demos/authorization/Publisher/Publisher.csproj", "{4AA1DDC2-448F-4672-B2C2-C1BB689E2DAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Publisher", "demos\authorization\Publisher\Publisher.csproj", "{4AA1DDC2-448F-4672-B2C2-C1BB689E2DAA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Subscriber", "demos/authorization/Subscriber/Subscriber.csproj", "{4929939A-33AE-40F6-A5B7-6BD3C1CBC275}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Subscriber", "demos\authorization\Subscriber\Subscriber.csproj", "{4929939A-33AE-40F6-A5B7-6BD3C1CBC275}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "extensions", "extensions", "{A03D4D00-7BB7-4FD9-AE68-FD282ED2EA17}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SquawkBus.Extensions.JwtAuthentication", "extensions/src/SquawkBus.Extensions.JwtAuthentication/SquawkBus.Extensions.JwtAuthentication.csproj", "{04E58103-8527-4D9F-8E66-CA03CD1919D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SquawkBus.Extensions.JwtAuthentication", "extensions\src\SquawkBus.Extensions.JwtAuthentication\SquawkBus.Extensions.JwtAuthentication.csproj", "{04E58103-8527-4D9F-8E66-CA03CD1919D2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4C990F9D-B9DC-43A9-BC5C-FA731FD1C3C0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{4B382A96-4A24-4AB1-B8D1-1BFAA48A62AA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SquawkBus.Extensions.JwtAuthentication.Test", "extensions/test/SquawkBus.Extensions.JwtAuthentication.Test/SquawkBus.Extensions.JwtAuthentication.Test.csproj", "{2FFF9FDE-88A5-4DAD-999A-F0F44F600096}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SquawkBus.Extensions.JwtAuthentication.Test", "extensions\test\SquawkBus.Extensions.JwtAuthentication.Test\SquawkBus.Extensions.JwtAuthentication.Test.csproj", "{2FFF9FDE-88A5-4DAD-999A-F0F44F600096}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SquawkBus.Extensions.LdapAuthentication", "extensions/src/SquawkBus.Extensions.LdapAuthentication/SquawkBus.Extensions.LdapAuthentication.csproj", "{FB73E13C-9326-4B46-AFA5-5930D719B1DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SquawkBus.Extensions.LdapAuthentication", "extensions\src\SquawkBus.Extensions.LdapAuthentication\SquawkBus.Extensions.LdapAuthentication.csproj", "{FB73E13C-9326-4B46-AFA5-5930D719B1DC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SquawkBus.Extensions.PasswordFileAuthentication", "extensions/src/SquawkBus.Extensions.PasswordFileAuthentication/SquawkBus.Extensions.PasswordFileAuthentication.csproj", "{4C92DBFC-A2B8-4FBA-B194-FACABD87ED63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SquawkBus.Extensions.PasswordFileAuthentication", "extensions\src\SquawkBus.Extensions.PasswordFileAuthentication\SquawkBus.Extensions.PasswordFileAuthentication.csproj", "{4C92DBFC-A2B8-4FBA-B194-FACABD87ED63}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SquawkBus.Extensions.PasswordFileAuthentication.Test", "extensions/test/SquawkBus.Extensions.PasswordFileAuthentication.Test/SquawkBus.Extensions.PasswordFileAuthentication.Test.csproj", "{1159DD34-45D8-4FA0-8701-7205B3DE2DAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SquawkBus.Extensions.PasswordFileAuthentication.Test", "extensions\test\SquawkBus.Extensions.PasswordFileAuthentication.Test\SquawkBus.Extensions.PasswordFileAuthentication.Test.csproj", "{1159DD34-45D8-4FA0-8701-7205B3DE2DAA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "utilities", "utilities", "{4663EB30-30FA-4F68-B951-470C027AF528}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0458682B-7202-402D-8D73-55F5D4CE57CC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MakePassword", "utilities/src/MakePassword/MakePassword.csproj", "{2AFF967E-7B31-4476-8FA5-FF32A2717B7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MakePassword", "utilities\src\MakePassword\MakePassword.csproj", "{2AFF967E-7B31-4476-8FA5-FF32A2717B7C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2F790AA1-EAE0-4817-BE09-D6B3AA29CD7E}"
 	ProjectSection(SolutionItems) = preProject
 		LICENSE.txt = LICENSE.txt
+		Makefile = Makefile
 		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "documents", "documents", "{FAED8CA1-9944-43F3-87EE-3F514EC38813}"
 	ProjectSection(SolutionItems) = preProject
-		documents/.gitignore = documents/.gitignore
-		documents/docfx.json = documents/docfx.json
-		documents/index.md = documents/index.md
-		documents/toc.yml = documents/toc.yml
+		documents\.gitignore = documents\.gitignore
+		documents\docfx.json = documents\docfx.json
+		documents\index.md = documents\index.md
+		documents\toc.yml = documents\toc.yml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "api", "api", "{4BA25AC1-5840-47ED-B2CB-215720501748}"
 	ProjectSection(SolutionItems) = preProject
-		documents/api/.gitignore = documents/api/.gitignore
-		documents/api/index.md = documents/api/index.md
+		documents\api\.gitignore = documents\api\.gitignore
+		documents\api\index.md = documents\api\index.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "articles", "articles", "{BC52FBDD-48BB-4D9D-850E-362A2391A19C}"
 	ProjectSection(SolutionItems) = preProject
-		documents/articles/authentication.md = documents/articles/authentication.md
-		documents/articles/authorization.md = documents/articles/authorization.md
-		documents/articles/configuration.md = documents/articles/configuration.md
-		documents/articles/getting-started-windows.md = documents/articles/getting-started-windows.md
-		documents/articles/installation-windows.md = documents/articles/installation-windows.md
-		documents/articles/intro.md = documents/articles/intro.md
-		documents/articles/selectfeed.md = documents/articles/selectfeed.md
-		documents/articles/ssl-linux.md = documents/articles/ssl-linux.md
-		documents/articles/ssl-windows-certs.md = documents/articles/ssl-windows-certs.md
-		documents/articles/ssl-windows.md = documents/articles/ssl-windows.md
-		documents/articles/toc.yml = documents/articles/toc.yml
+		documents\articles\authentication.md = documents\articles\authentication.md
+		documents\articles\authorization.md = documents\articles\authorization.md
+		documents\articles\configuration.md = documents\articles\configuration.md
+		documents\articles\getting-started-windows.md = documents\articles\getting-started-windows.md
+		documents\articles\installation-windows.md = documents\articles\installation-windows.md
+		documents\articles\intro.md = documents\articles\intro.md
+		documents\articles\selectfeed.md = documents\articles\selectfeed.md
+		documents\articles\ssl-linux.md = documents\articles\ssl-linux.md
+		documents\articles\ssl-windows-certs.md = documents\articles\ssl-windows-certs.md
+		documents\articles\ssl-windows.md = documents\articles\ssl-windows.md
+		documents\articles\toc.yml = documents\articles\toc.yml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "server-config", "server-config", "{FA84EB87-D3F3-443F-BA37-E0C49EB76061}"
 	ProjectSection(SolutionItems) = preProject
-		demos/server-config/README.md = demos/server-config/README.md
+		demos\server-config\README.md = demos\server-config\README.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "jwt", "jwt", "{710E56E0-0013-4FB5-A0FC-18E5700C4117}"
 	ProjectSection(SolutionItems) = preProject
-		demos/server-config/jwt/appsettings.json = demos/server-config/jwt/appsettings.json
-		demos/server-config/jwt/start_distributor.sh = demos/server-config/jwt/start_distributor.sh
+		demos\server-config\jwt\appsettings.json = demos\server-config\jwt\appsettings.json
+		demos\server-config\jwt\start_distributor.sh = demos\server-config\jwt\start_distributor.sh
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ldap", "ldap", "{EB8DFEE7-8DD1-4B00-8F2D-6AF228242EE9}"
 	ProjectSection(SolutionItems) = preProject
-		demos/server-config/ldap/appsettings.json = demos/server-config/ldap/appsettings.json
-		demos/server-config/ldap/README.md = demos/server-config/ldap/README.md
-		demos/server-config/ldap/start_distributor.sh = demos/server-config/ldap/start_distributor.sh
+		demos\server-config\ldap\appsettings.json = demos\server-config\ldap\appsettings.json
+		demos\server-config\ldap\README.md = demos\server-config\ldap\README.md
+		demos\server-config\ldap\start_distributor.sh = demos\server-config\ldap\start_distributor.sh
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "password-file", "password-file", "{F1FD40E3-FE66-4F46-9ACB-C52F1F180AC0}"
 	ProjectSection(SolutionItems) = preProject
-		demos/server-config/password-file/appsettings.json = demos/server-config/password-file/appsettings.json
-		demos/server-config/password-file/passwords.json = demos/server-config/password-file/passwords.json
-		demos/server-config/password-file/README.md = demos/server-config/password-file/README.md
-		demos/server-config/password-file/start_distributor.sh = demos/server-config/password-file/start_distributor.sh
+		demos\server-config\password-file\appsettings.json = demos\server-config\password-file\appsettings.json
+		demos\server-config\password-file\passwords.json = demos\server-config\password-file\passwords.json
+		demos\server-config\password-file\README.md = demos\server-config\password-file\README.md
+		demos\server-config\password-file\start_distributor.sh = demos\server-config\password-file\start_distributor.sh
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ssl", "ssl", "{836B34B7-8BAA-419C-BE75-B055890833AA}"
 	ProjectSection(SolutionItems) = preProject
-		demos/server-config/ssl/appsettings.json = demos/server-config/ssl/appsettings.json
-		demos/server-config/ssl/start_distributor.sh = demos/server-config/ssl/start_distributor.sh
+		demos\server-config\ssl\appsettings.json = demos\server-config\ssl\appsettings.json
+		demos\server-config\ssl\start_distributor.sh = demos\server-config\ssl\start_distributor.sh
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{956F930F-1779-4608-AF74-9044A290F1F9}"
+	ProjectSection(SolutionItems) = preProject
+		scripts\distributor.bat = scripts\distributor.bat
+		scripts\distributor.sh = scripts\distributor.sh
+		scripts\mkpasswd.bat = scripts\mkpasswd.bat
+		scripts\mkpasswd.sh = scripts\mkpasswd.sh
 	EndProjectSection
 EndProject
 Global
@@ -257,6 +266,7 @@ Global
 		{EB8DFEE7-8DD1-4B00-8F2D-6AF228242EE9} = {FA84EB87-D3F3-443F-BA37-E0C49EB76061}
 		{F1FD40E3-FE66-4F46-9ACB-C52F1F180AC0} = {FA84EB87-D3F3-443F-BA37-E0C49EB76061}
 		{836B34B7-8BAA-419C-BE75-B055890833AA} = {FA84EB87-D3F3-443F-BA37-E0C49EB76061}
+		{956F930F-1779-4608-AF74-9044A290F1F9} = {2F790AA1-EAE0-4817-BE09-D6B3AA29CD7E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EF56BD3F-2500-4BAE-8E34-951AD867F885}
