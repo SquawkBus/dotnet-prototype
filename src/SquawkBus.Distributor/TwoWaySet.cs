@@ -64,7 +64,7 @@ namespace SquawkBus.Distributor
         /// <param name="first">The key</param>
         /// <param name="seconds">A set of values matching the key</param>
         /// <returns>If the key exists <c>true</c>, otherwise <c>false</c>.</returns>
-        public bool TryGetValue(TFirst first, out ISet<TSecond> seconds)
+        public bool TryGetValue(TFirst first, out ISet<TSecond>? seconds)
         {
             return _firstToSeconds.TryGetValue(first, out seconds);
         }
@@ -75,7 +75,7 @@ namespace SquawkBus.Distributor
         /// <param name="second">The key</param>
         /// <param name="firsts">A set of values matching the key</param>
         /// <returns>If the key exists <c>true</c>, otherwise <c>false</c>.</returns>
-        public bool TryGetValue(TSecond second, out ISet<TFirst> firsts)
+        public bool TryGetValue(TSecond second, out ISet<TFirst>? firsts)
         {
             return _secondToFirsts.TryGetValue(second, out firsts);
         }
