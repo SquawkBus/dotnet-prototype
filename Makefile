@@ -1,5 +1,5 @@
 DISTRIBUTOR_VERSION=1.0.0-alpha1
-COMMON_VERSION=1.0.0-alpha1
+AUTHENTICATION_VERSION=1.0.0-alpha1
 MESSAGES_VERSION=1.0.0-alpha1
 ADAPTERS_VERSION=1.0.0-alpha1
 JWT_AUTHENTICATION_VERSION=1.0.0-alpha1
@@ -8,7 +8,7 @@ PWD_AUTHENTICATION_VERSION=1.0.0-alpha1
 MKPASSWD_VERSION=1.0.0-alpha1
 
 CORE_SRC=src
-EXTENSIONS_AUTH_SRC=extensions/src
+EXTENSIONS_SRC=extensions/src
 UTILS_SRC=utilities/src
 
 DIST_WIN10_X86=distributor-${DISTRIBUTOR_VERSION}-win10-x86
@@ -40,29 +40,45 @@ publish: publish-dist publish-mkpasswd
 publish-dist: publish-dist-win10-x86 publish-dist-win10-x64 publish-dist-linux-x64 publish-dist-osx-x64
 
 publish-dist-win10-x86:
-	dotnet publish ${CORE_SRC}/SquawkBus.Distributor -r win10-x86 -p:PublishSingleFile=true -o build/${DIST_WIN10_X86}
-	cp core/src/SquawkBus.Distributor/appsettings.json build/${DIST_WIN10_X86}
+	dotnet publish ${CORE_SRC}/SquawkBus.Distributor \
+		-r win10-x86 \
+		--self-contained true \
+		-p:PublishSingleFile=true \
+		-o build/${DIST_WIN10_X86}
+	cp ${CORE_SRC}/SquawkBus.Distributor/appsettings.json build/${DIST_WIN10_X86}
 	cp scripts/distributor.bat build/${DIST_WIN10_X86}
 	cd build && zip -r ${DIST_WIN10_X86}.zip ${DIST_WIN10_X86}
 	rm -r build/${DIST_WIN10_X86}
 
 publish-dist-win10-x64:
-	dotnet publish ${CORE_SRC}/SquawkBus.Distributor -r win10-x64 -p:PublishSingleFile=true -o build/${DIST_WIN10_X64}
-	cp core/src/SquawkBus.Distributor/appsettings.json build/${DIST_WIN10_X64}
+	dotnet publish ${CORE_SRC}/SquawkBus.Distributor \
+		-r win10-x64 \
+		--self-contained true \
+		-p:PublishSingleFile=true \
+		-o build/${DIST_WIN10_X64}
+	cp ${CORE_SRC}/SquawkBus.Distributor/appsettings.json build/${DIST_WIN10_X64}
 	cp scripts/distributor.bat build/${DIST_WIN10_X64}
 	cd build && zip -r ${DIST_WIN10_X64}.zip ${DIST_WIN10_X64}
 	rm -r build/${DIST_WIN10_X64}
 
 publish-dist-linux-x64:
-	dotnet publish ${CORE_SRC}/SquawkBus.Distributor -r linux-x64 -p:PublishSingleFile=true -o build/${DIST_LINUX_X64}
-	cp core/src/SquawkBus.Distributor/appsettings.json build/${DIST_LINUX_X64}
+	dotnet publish ${CORE_SRC}/SquawkBus.Distributor \
+		-r linux-x64 \
+		--self-contained true \
+		-p:PublishSingleFile=true \
+		-o build/${DIST_LINUX_X64}
+	cp ${CORE_SRC}/SquawkBus.Distributor/appsettings.json build/${DIST_LINUX_X64}
 	cp scripts/distributor.sh build/${DIST_LINUX_X64}
 	cd build && tar cvzf ${DIST_LINUX_X64}.tar.gz ${DIST_LINUX_X64}
 	rm -r build/${DIST_LINUX_X64}
 
 publish-dist-osx-x64:
-	dotnet publish ${CORE_SRC}/SquawkBus.Distributor -r osx-x64 -p:PublishSingleFile=true -o build/${DIST_OSX_X64}
-	cp core/src/SquawkBus.Distributor/appsettings.json build/${DIST_OSX_X64}
+	dotnet publish ${CORE_SRC}/SquawkBus.Distributor \
+		-r osx-x64 \
+		--self-contained true \
+		-p:PublishSingleFile=true \
+		-o build/${DIST_OSX_X64}
+	cp ${CORE_SRC}/SquawkBus.Distributor/appsettings.json build/${DIST_OSX_X64}
 	cp scripts/distributor.sh build/${DIST_OSX_X64}
 	cd build && tar cvzf ${DIST_OSX_X64}.tar.gz ${DIST_OSX_X64}
 	rm -r build/${DIST_OSX_X64}
@@ -72,25 +88,41 @@ publish-dist-osx-x64:
 publish-mkpasswd: publish-mkpasswd-win10-x86 publish-mkpasswd-win10-x64 publish-mkpasswd-linux-x64 publish-mkpasswd-osx-x64
 
 publish-mkpasswd-win10-x86:
-	dotnet publish ${UTILS_SRC}/MakePassword -r win10-x86 -p:PublishSingleFile=true -o build/${MKPASSWD_WIN10_X86}
+	dotnet publish ${UTILS_SRC}/MakePassword \
+		-r win10-x86 \
+		--self-contained true \
+		-p:PublishSingleFile=true \
+		-o build/${MKPASSWD_WIN10_X86}
 	cp scripts/mkpasswd.bat build/${MKPASSWD_WIN10_X86}
 	cd build && zip -r ${MKPASSWD_WIN10_X86}.zip ${MKPASSWD_WIN10_X86}
 	rm -r build/${MKPASSWD_WIN10_X86}
 
 publish-mkpasswd-win10-x64:
-	dotnet publish ${UTILS_SRC}/MakePassword -r win10-x64 -p:PublishSingleFile=true -o build/${MKPASSWD_WIN10_X64}
+	dotnet publish ${UTILS_SRC}/MakePassword \
+		-r win10-x64 \
+		--self-contained true \
+		-p:PublishSingleFile=true \
+		-o build/${MKPASSWD_WIN10_X64}
 	cp scripts/mkpasswd.bat build/${MKPASSWD_WIN10_X64}
 	cd build && zip -r ${MKPASSWD_WIN10_X64}.zip ${MKPASSWD_WIN10_X64}
 	rm -r build/${MKPASSWD_WIN10_X64}
 
 publish-mkpasswd-linux-x64:
-	dotnet publish ${UTILS_SRC}/MakePassword -r linux-x64 -p:PublishSingleFile=true -o build/${MKPASSWD_LINUX_X64}
+	dotnet publish ${UTILS_SRC}/MakePassword \
+		-r linux-x64 \
+		--self-contained true \
+		-p:PublishSingleFile=true \
+		-o build/${MKPASSWD_LINUX_X64}
 	cp scripts/mkpasswd.sh build/${MKPASSWD_LINUX_X64}
 	cd build && tar cvzf ${MKPASSWD_LINUX_X64}.tar.gz ${MKPASSWD_LINUX_X64}
 	rm -r build/${MKPASSWD_LINUX_X64}
 
 publish-mkpasswd-osx-x64:
-	dotnet publish ${UTILS_SRC}/MakePassword -r osx-x64 -p:PublishSingleFile=true -o build/${MKPASSWD_OSX_X64}
+	dotnet publish ${UTILS_SRC}/MakePassword \
+		-r osx-x64 \
+		--self-contained true \
+		-p:PublishSingleFile=true \
+		-o build/${MKPASSWD_OSX_X64}
 	cp scripts/mkpasswd.sh build/${MKPASSWD_OSX_X64}
 	cd build && tar cvzf ${MKPASSWD_OSX_X64}.tar.gz ${MKPASSWD_OSX_X64}
 	rm -r build/${MKPASSWD_OSX_X64}
@@ -100,19 +132,19 @@ publish-mkpasswd-osx-x64:
 copy-extensions: dotnet-build copy-extension-jwtauthentication copy-extension-ldapauthentication copy-extension-pwdauthentication
 
 copy-extension-jwtauthentication: build
-	cp -r ${EXTENSIONS_AUTH_SRC}/SquawkBus.Extension.JwtAuthentication/bin/Debug/netstandard2.1 build/SquawkBus.Extension.JwtAuthentication-${JWT_AUTHENTICATION_VERSION}
+	cp -r ${EXTENSIONS_SRC}/SquawkBus.Extension.JwtAuthentication/bin/Debug/netstandard2.1 build/SquawkBus.Extension.JwtAuthentication-${JWT_AUTHENTICATION_VERSION}
 	cd build && zip -r SquawkBus.Extension.JwtAuthentication-${JWT_AUTHENTICATION_VERSION}.zip SquawkBus.Extension.JwtAuthentication-${JWT_AUTHENTICATION_VERSION}
 	cd build && tar czvf SquawkBus.Extension.JwtAuthentication-${JWT_AUTHENTICATION_VERSION}.tar.gz SquawkBus.Extension.JwtAuthentication-${JWT_AUTHENTICATION_VERSION}
 	rm -r build/SquawkBus.Extension.JwtAuthentication-${JWT_AUTHENTICATION_VERSION}
 
 copy-extension-ldapauthentication: build
-	cp -r ${EXTENSIONS_AUTH_SRC}/SquawkBus.Extension.LdapAuthentication/bin/Debug/netstandard2.1 build/SquawkBus.Extension.LdapAuthentication-${LDAP_AUTHENTICATION_VERSION}
+	cp -r ${EXTENSIONS_SRC}/SquawkBus.Extension.LdapAuthentication/bin/Debug/netstandard2.1 build/SquawkBus.Extension.LdapAuthentication-${LDAP_AUTHENTICATION_VERSION}
 	cd build && zip -r SquawkBus.Extension.LdapAuthentication-${LDAP_AUTHENTICATION_VERSION}.zip SquawkBus.Extension.LdapAuthentication-${LDAP_AUTHENTICATION_VERSION}
 	cd build && tar czvf SquawkBus.Extension.LdapAuthentication-${LDAP_AUTHENTICATION_VERSION}.tar.gz SquawkBus.Extension.LdapAuthentication-${LDAP_AUTHENTICATION_VERSION}
 	rm -r build/SquawkBus.Extension.LdapAuthentication-${LDAP_AUTHENTICATION_VERSION}
 
 copy-extension-pwdauthentication: build
-	cp -r ${EXTENSIONS_AUTH_SRC}/SquawkBus.Extension.PasswordFileAuthentication/bin/Debug/netstandard2.1 build/SquawkBus.Extension.PasswordFileAuthentication-${PWD_AUTHENTICATION_VERSION}
+	cp -r ${EXTENSIONS_SRC}/SquawkBus.Extension.PasswordFileAuthentication/bin/Debug/netstandard2.1 build/SquawkBus.Extension.PasswordFileAuthentication-${PWD_AUTHENTICATION_VERSION}
 	cd build && zip -r SquawkBus.Extension.PasswordFileAuthentication-${PWD_AUTHENTICATION_VERSION}.zip SquawkBus.Extension.PasswordFileAuthentication-${PWD_AUTHENTICATION_VERSION}
 	cd build && tar czvf SquawkBus.Extension.PasswordFileAuthentication-${PWD_AUTHENTICATION_VERSION}.tar.gz SquawkBus.Extension.PasswordFileAuthentication-${PWD_AUTHENTICATION_VERSION}
 	rm -r build/SquawkBus.Extension.PasswordFileAuthentication-${PWD_AUTHENTICATION_VERSION}
@@ -120,17 +152,23 @@ copy-extension-pwdauthentication: build
 build:
 	mkdir build
 
-push-common:
-	dotnet pack ${CORE_SRC}/SquawkBus.Common
-	dotnet nuget push ${CORE_SRC}/SquawkBus.Common/bin/Debug/SquawkBus.Common.${COMMON_VERSION}.nupkg --api-key ${NUGET_API_KEY} --source https://api.nuget.org/v3/index.json
+push-authentication:
+	dotnet pack ${CORE_SRC}/SquawkBus.Authentication
+	dotnet nuget push ${CORE_SRC}/SquawkBus.Authentication/bin/Debug/SquawkBus.Authentication.${AUTHENTICATION_VERSION}.nupkg \
+		--api-key ${NUGET_API_KEY} \
+		--source https://api.nuget.org/v3/index.json
 
 push-messages:
 	dotnet pack ${CORE_SRC}/SquawkBus.Messages
-	dotnet nuget push ${CORE_SRC}/SquawkBus.Messages/bin/Debug/SquawkBus.Messages.${MESSAGES_VERSION}.nupkg --api-key ${NUGET_API_KEY} --source https://api.nuget.org/v3/index.json
+	dotnet nuget push ${CORE_SRC}/SquawkBus.Messages/bin/Debug/SquawkBus.Messages.${MESSAGES_VERSION}.nupkg \
+		--api-key ${NUGET_API_KEY} \
+		--source https://api.nuget.org/v3/index.json
 
 push-adapters:
 	dotnet pack ${CORE_SRC}/SquawkBus.Adapters
-	dotnet nuget push ${CORE_SRC}/SquawkBus.Adapters/bin/Debug/SquawkBus.Adapters.${ADAPTERS_VERSION}.nupkg --api-key ${NUGET_API_KEY} --source https://api.nuget.org/v3/index.json
+	dotnet nuget push ${CORE_SRC}/SquawkBus.Adapters/bin/Debug/SquawkBus.Adapters.${ADAPTERS_VERSION}.nupkg \
+		--api-key ${NUGET_API_KEY} \
+		--source https://api.nuget.org/v3/index.json
 
 clean:
 	-rm -r build
