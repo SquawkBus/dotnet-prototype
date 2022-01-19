@@ -11,15 +11,13 @@ CORE_SRC=src
 EXTENSIONS_SRC=extensions/src
 UTILS_SRC=utilities/src
 
-DIST_WIN10_X86=distributor-${DISTRIBUTOR_VERSION}-win10-x86
 DIST_WIN10_X64=distributor-${DISTRIBUTOR_VERSION}-win10-x64
 DIST_LINUX_X64=distributor-${DISTRIBUTOR_VERSION}-linux-x64
 DIST_OSX_X64=distributor-${DISTRIBUTOR_VERSION}-osx-x64
 
-MKPASSWD_WIN10_X86=MakePassword-${MKPASSWD_VERSION}-win10-x86
-MKPASSWD_WIN10_X64=MakePassword-${MKPASSWD_VERSION}-win10-x64
-MKPASSWD_LINUX_X64=MakePassword-${MKPASSWD_VERSION}-linux-x64
-MKPASSWD_OSX_X64=MakePassword-${MKPASSWD_VERSION}-osx-x64
+MKPASSWD_WIN10_X64=MakePassword-${MKPASSWD_VERSION}-win10-x64-sc
+MKPASSWD_LINUX_X64=MakePassword-${MKPASSWD_VERSION}-linux-x64-sc
+MKPASSWD_OSX_X64=MakePassword-${MKPASSWD_VERSION}-osx-x64-sc
 
 .PHONY: all dist dotnet-build publish clean
 
@@ -35,67 +33,46 @@ dotnet-build:
 
 publish: publish-dist publish-mkpasswd
 
-.PHONY: publish-dist-win10-x86 publish-dist-win10-x64 publish-dist-linux-x64 publish-dist-osx-x64
+.PHONY: publish-dist-win10-x64 publish-dist-linux-x64 publish-dist-osx-x64
 
-publish-dist: publish-dist-win10-x86 publish-dist-win10-x64 publish-dist-linux-x64 publish-dist-osx-x64
-
-publish-dist-win10-x86:
-	dotnet publish ${CORE_SRC}/SquawkBus.Distributor \
-		-r win10-x86 \
-		--self-contained true \
-		-p:PublishSingleFile=true \
-		-o build/${DIST_WIN10_X86}
-	cp ${CORE_SRC}/SquawkBus.Distributor/appsettings.json build/${DIST_WIN10_X86}
-	cp scripts/distributor.bat build/${DIST_WIN10_X86}
-	cd build && zip -r ${DIST_WIN10_X86}.zip ${DIST_WIN10_X86}
-	rm -r build/${DIST_WIN10_X86}
+publish-dist: publish-dist-win10-x64 publish-dist-linux-x64 publish-dist-osx-x64
 
 publish-dist-win10-x64:
 	dotnet publish ${CORE_SRC}/SquawkBus.Distributor \
 		-r win10-x64 \
 		--self-contained true \
 		-p:PublishSingleFile=true \
-		-o build/${DIST_WIN10_X64}
-	cp ${CORE_SRC}/SquawkBus.Distributor/appsettings.json build/${DIST_WIN10_X64}
-	cp scripts/distributor.bat build/${DIST_WIN10_X64}
-	cd build && zip -r ${DIST_WIN10_X64}.zip ${DIST_WIN10_X64}
-	rm -r build/${DIST_WIN10_X64}
+		-o build/${DIST_WIN10_X64_SC}
+	cp ${CORE_SRC}/SquawkBus.Distributor/appsettings.json build/${DIST_WIN10_X64_SC}
+	cp scripts/distributor.bat build/${DIST_WIN10_X64_SC}
+	cd build && zip -r ${DIST_WIN10_X64_SC}.zip ${DIST_WIN10_X64_SC}
+	rm -r build/${DIST_WIN10_X64_SC}
 
 publish-dist-linux-x64:
 	dotnet publish ${CORE_SRC}/SquawkBus.Distributor \
 		-r linux-x64 \
 		--self-contained true \
 		-p:PublishSingleFile=true \
-		-o build/${DIST_LINUX_X64}
-	cp ${CORE_SRC}/SquawkBus.Distributor/appsettings.json build/${DIST_LINUX_X64}
-	cp scripts/distributor.sh build/${DIST_LINUX_X64}
-	cd build && tar cvzf ${DIST_LINUX_X64}.tar.gz ${DIST_LINUX_X64}
-	rm -r build/${DIST_LINUX_X64}
+		-o build/${DIST_LINUX_X64_SC}
+	cp ${CORE_SRC}/SquawkBus.Distributor/appsettings.json build/${DIST_LINUX_X64_SC}
+	cp scripts/distributor.sh build/${DIST_LINUX_X64_SC}
+	cd build && tar cvzf ${DIST_LINUX_X64_SC}.tar.gz ${DIST_LINUX_X64_SC}
+	rm -r build/${DIST_LINUX_X64_SC}
 
 publish-dist-osx-x64:
 	dotnet publish ${CORE_SRC}/SquawkBus.Distributor \
 		-r osx-x64 \
 		--self-contained true \
 		-p:PublishSingleFile=true \
-		-o build/${DIST_OSX_X64}
-	cp ${CORE_SRC}/SquawkBus.Distributor/appsettings.json build/${DIST_OSX_X64}
-	cp scripts/distributor.sh build/${DIST_OSX_X64}
-	cd build && tar cvzf ${DIST_OSX_X64}.tar.gz ${DIST_OSX_X64}
-	rm -r build/${DIST_OSX_X64}
+		-o build/${DIST_OSX_X64_SC}
+	cp ${CORE_SRC}/SquawkBus.Distributor/appsettings.json build/${DIST_OSX_X64_SC}
+	cp scripts/distributor.sh build/${DIST_OSX_X64_SC}
+	cd build && tar cvzf ${DIST_OSX_X64_SC}.tar.gz ${DIST_OSX_X64_SC}
+	rm -r build/${DIST_OSX_X64_SC}
 
-.PHONY: publish-mkpasswd-win10-x86 publish-mkpasswd-win10-x64 publish-mkpasswd-linux-x64 publish-mkpasswd-osx-x64
+.PHONY: publish-mkpasswd-win10-x64 publish-mkpasswd-linux-x64 publish-mkpasswd-osx-x64
 
-publish-mkpasswd: publish-mkpasswd-win10-x86 publish-mkpasswd-win10-x64 publish-mkpasswd-linux-x64 publish-mkpasswd-osx-x64
-
-publish-mkpasswd-win10-x86:
-	dotnet publish ${UTILS_SRC}/MakePassword \
-		-r win10-x86 \
-		--self-contained true \
-		-p:PublishSingleFile=true \
-		-o build/${MKPASSWD_WIN10_X86}
-	cp scripts/mkpasswd.bat build/${MKPASSWD_WIN10_X86}
-	cd build && zip -r ${MKPASSWD_WIN10_X86}.zip ${MKPASSWD_WIN10_X86}
-	rm -r build/${MKPASSWD_WIN10_X86}
+publish-mkpasswd: publish-mkpasswd-win10-x64 publish-mkpasswd-linux-x64 publish-mkpasswd-osx-x64
 
 publish-mkpasswd-win10-x64:
 	dotnet publish ${UTILS_SRC}/MakePassword \
