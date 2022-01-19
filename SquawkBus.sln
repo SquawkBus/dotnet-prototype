@@ -141,6 +141,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{956F
 		scripts\mkpasswd.sh = scripts\mkpasswd.sh
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquawkBus.DistributorConsole", "src\SquawkBus.DistributorConsole\SquawkBus.DistributorConsole.csproj", "{E3CB1761-6C37-4977-92B8-7DBCF43BEDB4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -227,6 +229,10 @@ Global
 		{2AFF967E-7B31-4476-8FA5-FF32A2717B7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2AFF967E-7B31-4476-8FA5-FF32A2717B7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2AFF967E-7B31-4476-8FA5-FF32A2717B7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3CB1761-6C37-4977-92B8-7DBCF43BEDB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3CB1761-6C37-4977-92B8-7DBCF43BEDB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3CB1761-6C37-4977-92B8-7DBCF43BEDB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3CB1761-6C37-4977-92B8-7DBCF43BEDB4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -267,6 +273,7 @@ Global
 		{F1FD40E3-FE66-4F46-9ACB-C52F1F180AC0} = {FA84EB87-D3F3-443F-BA37-E0C49EB76061}
 		{836B34B7-8BAA-419C-BE75-B055890833AA} = {FA84EB87-D3F3-443F-BA37-E0C49EB76061}
 		{956F930F-1779-4608-AF74-9044A290F1F9} = {2F790AA1-EAE0-4817-BE09-D6B3AA29CD7E}
+		{E3CB1761-6C37-4977-92B8-7DBCF43BEDB4} = {8C8D73A6-B2DF-4B86-977A-02FB8FC97C10}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EF56BD3F-2500-4BAE-8E34-951AD867F885}

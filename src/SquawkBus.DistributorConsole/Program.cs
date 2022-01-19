@@ -7,10 +7,11 @@ using Microsoft.Extensions.Logging.Configuration;
 using Prometheus;
 
 using SquawkBus.Authentication;
+using SquawkBus.Distributor;
 using SquawkBus.Distributor.Configuration;
 using SquawkBus.Distributor.Utilities;
 
-namespace SquawkBus.Distributor
+namespace SquawkBus.DistributorConsole
 {
     class Program : IDisposable
     {

@@ -1,3 +1,5 @@
+using System;
+
 namespace SquawkBus.Distributor.Roles
 {
     public class InteractorRole
