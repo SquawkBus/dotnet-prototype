@@ -1,4 +1,7 @@
-﻿using SquawkBus.Adapters;
+﻿using System;
+using System.Collections.Generic;
+
+using SquawkBus.Adapters;
 
 using Common;
 

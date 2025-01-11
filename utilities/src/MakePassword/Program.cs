@@ -1,4 +1,5 @@
-﻿using SquawkBus.Extensions.PasswordFileAuthentication;
+﻿using System;
+using SquawkBus.Extensions.PasswordFileAuthentication;
 
 namespace MakePassword
 {

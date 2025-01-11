@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace SquawkBus.Distributor.Roles
 {
     public class DistributorRole

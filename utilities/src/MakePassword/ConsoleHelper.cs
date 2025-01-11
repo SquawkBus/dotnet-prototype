@@ -1,3 +1,5 @@
+using System;
+
 namespace MakePassword
 {
     public static class ConsoleHelper

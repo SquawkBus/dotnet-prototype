@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 using Prometheus;
 
 namespace SquawkBus.Distributor.Utilities
