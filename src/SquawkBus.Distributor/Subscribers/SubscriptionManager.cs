@@ -1,9 +1,14 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
 using Microsoft.Extensions.Logging;
 
 using SquawkBus.Distributor.Interactors;
 using SquawkBus.Distributor.Notifiers;
 using SquawkBus.Distributor.Publishers;
 using SquawkBus.Distributor.Roles;
+
 using SquawkBus.Messages;
 
 namespace SquawkBus.Distributor.Subscribers
@@ -188,7 +193,7 @@ namespace SquawkBus.Distributor.Subscribers
                     }
                     catch (Exception error)
                     {
-                        _logger.LogDebug(error, "Failed to inform {subscriber} regarding {Message}", message);
+                        _logger.LogDebug(error, "Failed to inform {subscriber} regarding {Message}", subscriber, message);
                     }
                 }
             }

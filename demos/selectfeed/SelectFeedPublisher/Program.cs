@@ -1,4 +1,6 @@
-﻿namespace SelectfeedPublisher
+﻿using System;
+
+namespace SelectfeedPublisher
 {
     class Program
     {

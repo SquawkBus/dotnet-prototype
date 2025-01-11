@@ -1,3 +1,5 @@
+using System;
+
 using SquawkBus.Messages;
 
 namespace SquawkBus.Distributor.Interactors
