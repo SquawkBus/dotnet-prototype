@@ -1,4 +1,5 @@
 using System;
+using System.Buffers.Binary;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -48,13 +49,8 @@ namespace SquawkBus.Messages
         /// <param name="value">The value to write</param>
         public void Write(int value)
         {
-            var buf = new[]
-            {
-                (byte) ((value >> 24) & 0xFF),
-                (byte) ((value >> 16) & 0xFF),
-                (byte) ((value >> 8) & 0xFF),
-                (byte) ((value >> 0) & 0xFF)
-            };
+            var buf = new byte[4];
+            BinaryPrimitives.WriteInt32BigEndian(buf, value);
 
             _stream.Write(buf, 0, 4);
         }

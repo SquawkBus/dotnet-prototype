@@ -1,4 +1,5 @@
 using System;
+using System.Buffers.Binary;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -52,11 +53,7 @@ namespace SquawkBus.Messages
         public int ReadInt32()
         {
             var buf = ReadFully(new byte[4]);
-            return
-                (buf[0] << 24) +
-                (buf[1] << 16) +
-                (buf[2] << 8) +
-                (buf[3] << 0);
+            return BinaryPrimitives.ReadInt32BigEndian(buf);
         }
 
         /// <summary>
